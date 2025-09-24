@@ -1,4 +1,4 @@
-# Medicore Medical Services Test App
+# Medicore Medical Services App
 
 ## Overview
 Medicore Medical Services Test App is a cross-platform application built with .NET MAUI, designed to provide medical services functionality in a portable and user-friendly interface. The application targets Android, iOS, macOS Catalyst and Windows platforms.
