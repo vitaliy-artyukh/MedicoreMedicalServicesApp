@@ -29,32 +29,7 @@ public static class MauiProgram
                 true,
                 static () =>
                 {
-                    var titleFont = "OpenSans-SemiBold.ttf";
-                    var font = "OpenSans-Regular.ttf";
-                    var buttonFont = "OpenSans-SemiBold.ttf";
-
-                    AlertConfig.DefaultTitleFontFamily = titleFont;
-                    AlertConfig.DefaultMessageFontFamily = font;
-                    AlertConfig.DefaultPositiveButtonFontFamily = buttonFont;
-
-                    ConfirmConfig.DefaultTitleFontFamily = titleFont;
-                    ConfirmConfig.DefaultMessageFontFamily = font;
-                    ConfirmConfig.DefaultNegativeButtonFontFamily = buttonFont;
-                    ConfirmConfig.DefaultPositiveButtonFontFamily = buttonFont;
-
-                    ActionSheetConfig.DefaultTitleFontFamily = titleFont;
-                    ActionSheetConfig.DefaultMessageFontFamily = font;
-                    ActionSheetConfig.DefaultOptionsButtonFontFamily = font;
-                    ActionSheetConfig.DefaultDestructiveButtonFontFamily = font;
-                    ActionSheetConfig.DefaultNegativeButtonFontFamily = buttonFont;
-
-                    HudDialogConfig.DefaultMessageFontFamily = font;
-                    HudDialogConfig.DefaultNegativeButtonFontFamily = buttonFont;
-
-                    ToastConfig.DefaultMessageFontFamily = font;
-
-                    SnackbarConfig.DefaultMessageFontFamily = font;
-                    SnackbarConfig.DefaultNegativeButtonFontFamily = buttonFont;
+                    
                 }
             )
             .ConfigureFonts(

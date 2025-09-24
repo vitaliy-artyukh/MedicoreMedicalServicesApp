@@ -10,8 +10,7 @@ public partial class HistoryPageViewModel : BaseViewModel
 {
     private readonly IQuestionnaireService _questionnaireService;
 
-    [ObservableProperty] 
-    private List<QuestionnaireResponses>? _historyResponses;
+    [ObservableProperty] private List<QuestionnaireResponses>? _historyResponses;
 
     public HistoryPageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
     {

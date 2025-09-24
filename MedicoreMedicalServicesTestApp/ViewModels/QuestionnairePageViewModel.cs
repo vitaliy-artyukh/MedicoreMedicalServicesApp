@@ -13,8 +13,7 @@ public partial class QuestionnairePageViewModel : BaseViewModel
 {
     private readonly IQuestionnaireService _questionnaireService;
 
-    [ObservableProperty] 
-    private List<BaseQuestionObservable>? _questions;
+    [ObservableProperty] private List<BaseQuestionObservable>? _questions;
 
     public QuestionnairePageViewModel(IServiceProvider serviceProvider) : base(serviceProvider)
     {
@@ -63,11 +62,14 @@ public partial class QuestionnairePageViewModel : BaseViewModel
         await NavigationService.NavigateAsync(nameof(HistoryPage));
     }
 
-    [RelayCommand(CanExecute = nameof(CanSave))]
+    [RelayCommand]
     private async Task OnSaveAnswerAsync()
     {
         try
         {
+            if (!CanSave())
+                return;
+            
             using (UserDialogs.Loading())
             {
                 await Task.Delay(2000);
@@ -87,7 +89,6 @@ public partial class QuestionnairePageViewModel : BaseViewModel
                         case TextQuestionObservable textQuestionObservable:
                             textQuestionObservable.Answer = string.Empty;
                             break;
-
                     }
                 }
             }
@@ -128,6 +129,6 @@ public partial class QuestionnairePageViewModel : BaseViewModel
                 break;
         }
 
-        return!hasAnyRequired || hasAnyRequired && canSave;
+        return !hasAnyRequired || hasAnyRequired && canSave;
     }
 }

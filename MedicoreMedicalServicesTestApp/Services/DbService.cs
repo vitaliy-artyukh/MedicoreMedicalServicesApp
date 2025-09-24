@@ -33,7 +33,13 @@ public class DbService : IDbService
         if (_db != null)
             return;
 
-        var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "medicore_medical.db");
+        var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "medicore_medical.db");
+
+#if ANDROID
+        SQLitePCL.Batteries_V2.Init();
+#endif
+
         _db = new SQLiteAsyncConnection(databasePath);
 
         await _db.CreateTableAsync<ResponseDto>();
@@ -45,6 +51,7 @@ public class DbService : IDbService
         await InitializeAsync();
         return await _db!.InsertAsync(item);
     }
+
     public async Task<int> InsertAll<T>(IEnumerable<T> items) where T : class
     {
         await InitializeAsync();
@@ -80,7 +87,7 @@ public class DbService : IDbService
         await InitializeAsync();
 
         var connection = _db!.GetConnection();
-        
+
         using var _ = connection.Lock();
 
         connection.BeginTransaction();
