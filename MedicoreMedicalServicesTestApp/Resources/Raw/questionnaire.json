@@ -1,0 +1,47 @@
+[
+  {
+    "id": "2C633535-7CFE-4352-AAF6-80892B192EDD",
+    "title": "Patient Health Questionnaire-9 (PHQ-9)",
+    "description": "The PHQ-9 is a multipurpose instrument for screening, diagnosing, monitoring and measuring the severity of depression.",
+    "type": 0,
+    "isRequired": true
+  },
+  {
+    "id": "2C633535-7CFE-4352-AAF6-80892B192EDD",
+    "title": "Options for PHQ-9",
+    "type": 0,
+    "isRequired": false
+  },
+  {
+    "id": "A1B2C3D4-E5F6-7890-1234-56789ABCDEF0",
+    "title": "Date of Assessment",
+    "description": "Date of Assessment for the questionnaire",
+    "type": 1,
+    "isRequired": false
+  },
+  {
+    "id": "A1B2C3D4-E5F6-7890-1234-56789ABCDEF1",
+    "title": "Insomnia Severity Index (ISI)",
+    "description": "The ISI is a brief instrument designed to assess the severity of both nighttime and daytime components of insomnia.",
+    "type": 2,
+    "isRequired": true,
+    "args": [
+      {
+        "id": "8DCDC8AD-5A9F-4BB0-88E7-056F2ED81212",
+        "text": "None"
+      },
+      {
+        "id": "8DCDC8AD-5A9F-4BB0-88E7-056F2ED81213",
+        "text": "Mild"
+      },
+      {
+        "id": "8DCDC8AD-5A9F-4BB0-88E7-056F2ED81214",
+        "text": "Moderate"
+      },
+      {
+        "id": "8DCDC8AD-5A9F-4BB0-88E7-056F2ED81215",
+        "text": "Severe"
+      }
+    ]
+  }
+]

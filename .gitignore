@@ -1,0 +1,10 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea/.idea.MedicoreMedicalServicesTestApp/.idea/
+
+.DS_Store
+
+MedicoreMedicalServicesTestApp.sln.DotSettings.user
